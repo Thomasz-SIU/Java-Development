@@ -1,0 +1,59 @@
+Notepad++ v7.7.1 enhancements and bug-fixes:
+
+import java.io*;
+import java.util.Scanner;
+
+public class BowlingBuddy
+{
+		public static void main(String[]args)
+								throws FileNotFoundException
+		{
+		 String [] blue_members = new String[10], white_members = new String[10];
+		 int [] blue_scores = new int [10], white_scores = new int[10];
+		 
+		 int blue_count=0, white_count=0;
+		 int sum_blue=0, sum_white=0;
+		 int team_members;
+		 String team;
+		 int score_num;
+		 
+		 Scanner fileln = new Scanner(new File("bowling.txt"));
+		 
+		 while(fileln.hasNext())
+		 {
+			team_member = fileln.next();
+			
+			team = fileln.nextInt();
+			
+			score_num = fileln.nextInt();
+			
+			if(team.equals("Blue"))
+			{
+				blue_members[blue_count] = team_member;
+				blue_scores[blue_count] = score_num;
+				sum_white = sum_white + score_num;
+				white_count + white_count + 1;
+				
+			}
+		 }
+			 fileln.close();
+		if(sum_blue>sum_white)
+		{
+			System.out.println("Winning Team: Blue");
+			
+			for(int i=0; i < blue_count; i++)
+				System.out.println(blue_members[i]+"  "+ blue_scores[i]));
+		}	
+		
+		else
+		{
+			System.out.println("Winning Team: White");
+			
+			for(int i=0 i < white_count; i++)
+				System.out.println(white_members[i]+"     "+ white_scores[i]));
+		}
+		    }
+				{
+	  }
+    }
+}
